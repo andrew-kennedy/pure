@@ -132,11 +132,14 @@ function fish_prompt
     set prompt $prompt $user_and_host
   end
 
+  # vi-mode indicator
+  set mode_indicator (fish_default_mode_prompt)
+
   # Prompt command execution duration
   set command_duration (__format_time $CMD_DURATION $pure_command_max_exec_time)
   set prompt $prompt "$pure_color_yellow$command_duration$pure_color_normal"
 
-  set prompt $prompt "\n$color_symbol$pure_symbol_prompt$pure_color_normal "
+  set prompt $prompt "\n$mode_indicator$color_symbol$pure_symbol_prompt$pure_color_normal "
 
   echo -e -s $prompt
 
