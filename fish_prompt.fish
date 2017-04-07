@@ -142,7 +142,7 @@ function fish_prompt
   end
 
   # vi-mode indicator
-  set mode_indicator (fish_default_mode_prompt)
+  set mode_indicator (fish_mode_prompt)
 
   # Prompt command execution duration
   set command_duration (__format_time $CMD_DURATION $pure_command_max_exec_time)
